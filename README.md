@@ -1,31 +1,29 @@
-Introduction
-For this assignment, you will be working on a simple terminal-based street map application named Simple Street Map (SSM). Writing this program will require a good understanding of C structures, array, and dynamic memory allocation. The scope of this assignment is twice as large as assignment 1. Therefore, you are strongly suggested to start early and ask a lot of questions.
 
 Background
+
 OpenStreetMapLinks to an external site. (OSM) is an open source mapping platform that allows people to contribute, edit, and use geospatial data freely. The platform employs user-generated data to create detailed and up-to-date maps, encompassing a diverse range of geographical features such as roads, buildings, rivers, and points of interest. OSM has gained prominence for its flexibility, inclusivity, and the ability to serve various applications, from navigation tools and urban planning to disaster response and humanitarian aid efforts. Unfortunately, OpenStreetMap is much too complicated for a small programming course such as CSC209, as such, we have greatly reduced the complexity and richness of its dataset so the result is distilled with the single purpose of driving a motor vehicle around an area inside the map. 
 
-Simple Street Map
-There are only two main concepts in simple street map: nodes and ways.
+Simple Street Map: There are only two main concepts in simple street map: nodes and ways.
 
-Node
-A node in OSM is a single point on the map, denoted by latitude and longitude. A node can optionally contain metadata, but we have removed all of them for the simplicity of the assignment, e.g., turn restrictions like "no left turn".
+Node: A node in OSM is a single point on the map, denoted by latitude and longitude. A node can optionally contain metadata, but we have removed all of them for the simplicity of the assignment, e.g., turn restrictions like "no left turn".
 
-Way
-A way in OSM contains an ordered sequence of nodes that makes up a road segment. It also contains various metadata about the road segment. For this assignment, we only care about three pieces of information: 
+Way: A way in OSM contains an ordered sequence of nodes that makes up a road segment. It also contains various metadata about the road segment. For this assignment, we only care about three pieces of information: 
 
-Name: the name of the road segment. Note that some roads are unnamed. In this case, they are given a unique OSM way ID.
-One-way: whether the road segment is one-way, signifying that you cannot drive in the reverse direction.
-Speed Limit: the maximum legal speed of the road segment.
+- Name: the name of the road segment. Note that some roads are unnamed. In this case, they are given a unique OSM way ID.
 
-Map File
-Note: this is optional reading because the code that parses the map file has already been completed for you.
+- One-way: whether the road segment is one-way, signifying that you cannot drive in the reverse direction.
+
+- Speed Limit: the maximum legal speed of the road segment.
+
+Map File:
 
 Each map of an area is encoded in a human-readable text file. You can find this in the starter code (described in Setup section). The first line of all SSM map files is "Simple Street Map", followed by a count of way objects and node objects that are defined in the file, e.g.:
 
-Simple Street Map
-410 ways
-1924 nodes
-Then, all way objects are defined, followed by node objects. For a way object, it is formatted as follows:
+ Simple Street Map
+ 410 ways
+ 1924 nodes
+ 
+ Then, all way objects are defined, followed by node objects. For a way object, it is formatted as follows:
 
 way <id> <osmid> <name>
  <speed limit> <oneway or normal> <number of associated nodes>
