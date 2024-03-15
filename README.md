@@ -19,9 +19,9 @@ Map File:
 
 Each map of an area is encoded in a human-readable text file. You can find this in the starter code (described in Setup section). The first line of all SSM map files is "Simple Street Map", followed by a count of way objects and node objects that are defined in the file, e.g.:
 
- Simple Street Map
- 410 ways
- 1924 nodes
+ - Simple Street Map
+ - 410 ways
+ - 1924 nodes
  
  Then, all way objects are defined, followed by node objects. For a way object, it is formatted as follows:
 
