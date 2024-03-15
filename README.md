@@ -41,10 +41,6 @@ For example:
 
 node 579 42606901 43.6606766 -79.3866647 3
  77 102 158
-When parsing the map file, we intentionally discard the OSM ids because they are not needed for the purpose of completing the assignment. However, you can use the OSM ids to find the corresponding nodes and ways on the OpenStreetMap website, which can help you visualize the map while working on this assignment.
-
-Description
-The program that you will build is an interactive tool that acts similar to a terminal-based database client. It takes a map file as the program argument, and attempts to load file. Upon success, a shell session would begin, like this:
 
 $ ./ssmap maps/uoft.txt
 maps/uoft.txt successfully loaded. 1924 nodes, 410 ways.
@@ -85,10 +81,6 @@ Note: in the last case, there are no two streets connecting to a node where the 
 
 Note: for the simplicity of this assignment, we unfortunately do not support multi-word searches like "St George" or "Ursula Franklin".
 
-path
-The path command has two variations: time and create.
-
-The path time command takes a list of node ids and prints the amount of time it takes to traverse from the first node to the last node. e.g.:
 
 >> path time 199 200 201 202
 0.1201 minutes
